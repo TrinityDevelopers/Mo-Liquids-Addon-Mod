@@ -8,7 +8,7 @@
 MilkTile::MilkTile(int id) : Tile(id, "flowing_water", &Material::water) {
 	this->setDescriptionId("Milk");
 	this->setCategory(1);
-	this->renderLayer = RENDERLAYER_BLEND;
+	this->renderLayer = Tile::clamLava->renderLayer;
 	this->tileType = LiquidTile;
 	Tile::tiles[id] = this;
 	Tile::translucency[id] = Tile::translucency[10];

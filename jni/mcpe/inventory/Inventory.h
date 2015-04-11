@@ -15,5 +15,5 @@ public:
 	virtual int getContainerSize();
 	virtual bool stillValid(Player *);
 	virtual void add(ItemInstance *);
-	virtual void doDrop(ItemInstance *, bool);
+	virtual void doDrop(ItemInstance *, bool);	
 };

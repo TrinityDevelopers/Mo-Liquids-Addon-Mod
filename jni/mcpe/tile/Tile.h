@@ -56,17 +56,19 @@ public:
 public:
 	// Size : 140
 	//void **vtable;		// 0
-	char filler1[52];					//4
+	/*char filler1[52];					//4
 	bool _replaceable;					//56
 	AABB* shape;							//60
-	TextureUVCoordinateSet* tex;			//64
+	TextureUVCoordinateSet* tex;*/			//64
+	char filler1[64];
 	const TileID id;					//68
 	const SoundType* soundType;			//72
 	RenderLayer renderLayer;			//76
 	bool canBuildOver;					//80
 	int renderShape;					//84
 	TileType tileType;					//88
-	TileEntityType tileEntityType;		//92
+	char filler2[52];
+	/*TileEntityType tileEntityType;		//92
 	float thickness;					//96
 	bool canSlide;						//100
 	bool canInstatick;					//104
@@ -79,7 +81,7 @@ public:
 	bool fancy;							//128
 	char filler2[4];		//std::shared_ptr<TextureAtlas> _terrainTextureAtlas;  //132
 	unsigned int faceTextureIsotropic;	//136
-	std::string descriptionId;			//140
+	std::string descriptionId;*/			//140
 
 public:
 	Tile(int, Material const*);
@@ -156,7 +158,6 @@ public:
 	virtual void setTicking(bool); // 71
 	virtual void getSpawnResourcesAuxValue(int); // 72
 	virtual void init(); // 73
-	virtual bool isLiquidTile();
 	static void initTiles();
 	static Material *getTileMaterial(int);
 	static float getLightEmission(TileID);

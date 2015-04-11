@@ -76,7 +76,7 @@ static void ItemInstance$useOn_hook(ItemInstance* itemStack, Player* player, int
 	theTileSource = getTileSource(theLevel);
 	theInventory = getInventory(player);
 	
-	if(itemStack->item->id == 325 && itemStack->damage == 1) {
+	if(itemStack->item == Item::items[325] && itemStack->damage == 1) {
 		TileID milkTileID = MilkTile::milk->id;
 		theTileSource->setTile(x, y + 1, z, milkTileID, 3);
 		if(theGamemode->isSurvivalType() == true) {
